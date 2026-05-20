@@ -1,0 +1,17 @@
+:root {
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.row {
+    display: flex;
+}
+
+.tile {
+    width: 3rem;
+    height: 3rem;
+}

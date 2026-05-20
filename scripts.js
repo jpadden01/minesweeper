@@ -44,3 +44,24 @@ function makeBoard() {
 
     return board;
 }
+
+function drawBoard() {
+    const boardElement = document.querySelector(".board");
+    for (const row of board) {
+        const rowElement = document.createElement("div");
+        rowElement.classList.add("row");
+        for (const tile of row) {
+            const tileElement = document.createElement("button");
+            tileElement.classList.add("tile")
+            if (tile === -1) {
+                tileElement.classList.add("mine");
+            } else {
+                tileElement.classList.add(`${tile}`);
+            }
+            rowElement.appendChild(tileElement);
+        }
+        boardElement.appendChild(rowElement);
+    }
+}
+
+drawBoard();
